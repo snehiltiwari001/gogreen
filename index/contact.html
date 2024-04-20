@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Path -->
+    <link rel="stylesheet" href="C:\Users\dell\Desktop\Green EV\CSS\contact.css">
+    <link rel="stylesheet" href= "C:\Users\dell\Desktop\Green EV\CSS\nav.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    
+    <!--Path-->
+    <script src="C:\Users\dell\Desktop\Green EV\JS\getintouch.js"></script>
+    
+ 
+  </head>
+
+  <body>
+    <header>
+  
+      <div class="website-name">
+        &nbsp;&nbsp;GoGreen
+      </div>
+  
+      <button class="register-button" onclick="openGetInTouch()">Get in touch</button>
+
+    </header>
+    <nav>
+      <a href="C:\Users\dell\Desktop\Green EV\Index\home.html">Home</a> <!--Path -->
+      <a href="C:\Users\dell\Desktop\Green EV\Index\blog.html">Blog</a><!--Path -->
+      <a href="C:\Users\dell\Desktop\Green EV\Index\products\products.html">Products</a>    <!--Path -->
+      <a href="C:\Users\dell\Desktop\Green EV\Index\about.html">About</a><!--Path -->
+      <a href="C:\Users\dell\Desktop\Green EV\Index\contact.html">Contact</a><!--Path -->
+  </nav>
+  <br><br>
+
+
+<h1>CONTACT US</h1>
+<div class="contact-form">
+  <form id="contact-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
+<br><br><br><br>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    var mailtoLink = 'mailto:gogreen@gmail.com?subject=Contact%20Us&body=Name:%20' + name + '%0AEmail:%20' + email + '%0AMessage:%20' + message;
+    window.location.href = mailtoLink;
+  });
+</script>
+
+<br><br>
+
+    <section class="newsletter">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Stay updated with our latest news and promotions.</p>
+      <form id="newsletterForm" onsubmit="submitForm(event)">
+        <input type="email" id="emailInput" placeholder="Enter your email address" required>
+        <button type="submit" id="submitButton">Subscribe</button>
+        <button type="button" id="submittedButton" class="hide">Submitted</button>
+        <button type="button" id="homeButton" class="hide" onclick="window.location.href='C:/Users/dell/Desktop/Green EV/Index/home.html'">Home</button> <!--Path -->
+      </form>
+
+
+      <p class="copyright">GoGreen | &copy;2024</p>
+      <p class="copyright">📍Disclaimer: GoGreen Is A Clone Website Designed For Informational Purposes Only. The Use Of Product Names, Logos, And Other Trademarks Is Solely For The Purpose Of Providing Information About Electric Vehicles And Related Products. GoGreen Does Not Sell Or Claim Ownership Of Any Of The Products Or Brands Mentioned On The Website. Any Product Information Provided On This Website Is Sourced From Publicly Available Information And Is Not Intended To Infringe Upon The Rights Of Any Third Party. If You Are The Owner Of Any Copyrighted Material And Believe That Your Rights Have Been Violated, Please Contact Us For Prompt Removal Or Appropriate Credit</p>
+    </section>
+</body>
+</html>
